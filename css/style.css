@@ -1,1 +1,130 @@
-@import url(variable.css);
+@import url(variables.css);
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    
+}
+.container{
+    display: grid;
+    height: 100%;
+    width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "texto fotoSuperior1 fotoSuperior2"
+    "foto01 foto02 foto03"
+    ;
+    /* background: red; */
+    background: var(--color-secundary);
+}
+.body{
+    background: var(--color-primary);
+}
+.container div{
+    margin-bottom: 25px;
+}
+.item_1{
+    grid-area: texto;
+    margin: 0;
+}
+.item_1 ul li h1{
+    font-weight: bold;
+}
+.item_1 ul li p{
+    font-size: 80%;
+}
+.item_1 ul li button{
+    font-size: 8px;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--color-primary);
+    background: black;
+    height: 25px;
+    width: 70px;
+    border-radius: 8px;
+    border: none;
+}
+.item_1 ul{
+    list-style: none;
+}
+.item_2{
+    grid-area: fotoSuperior1;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.item_2 img{
+    margin-top: 5%;
+    height: 70%;
+    width: 85%;
+    border-radius: 10px;
+}
+.item_3{
+    grid-area: fotoSuperior2;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.item_3 img{
+    height: 210px;
+    width: 85%;
+    border-radius: 10px;
+    margin-top: 40%;
+}
+.item_4{
+    grid-area: foto01;
+
+}
+.item_4 div{
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.item_4 img{
+    height: 180px;
+    width: 80%;
+    border-radius: 10px;
+}
+.item_5{
+    grid-area: foto02;
+    overflow: hidden;
+}
+.item_5 div{
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.item_5 div img{
+    height: 180px;
+    width: 80%;
+    border-radius: 10px;
+}
+.item_6{
+    grid-area: foto03;
+    
+}
+.item_6 div{
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.item_6 div img{
+    height: 180px;
+    width: 80%;
+    border-radius: 10px;
+}
+.item_4 p,.item_5 p ,.item_6 p{
+    font-size: large;
+    position: relative;
+    margin-left: 30px;
+    opacity: 30%;
+}
